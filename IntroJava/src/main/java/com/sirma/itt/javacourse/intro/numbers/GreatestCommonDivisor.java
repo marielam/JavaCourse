@@ -1,5 +1,7 @@
 package com.sirma.itt.javacourse.intro.numbers;
 
+import com.sirma.itt.javacourse.intro.messages.Messages;
+
 /**
  * Class for finding the greatest common divisor of two integers.
  * 
@@ -14,8 +16,6 @@ public final class GreatestCommonDivisor {
 
 	}
 
-	public static final String TWO_ZEROS_ERROR_MESSAGE = "Both, The two numbers are zeros.";
-
 	/**
 	 * Finds the greatest common divisor of two integers.
 	 * 
@@ -27,9 +27,9 @@ public final class GreatestCommonDivisor {
 	 */
 	public static long findGreatestCommonDivisor(int number1, int number2) {
 		if (number1 == 0 && number2 == 0) {
-			throw new IllegalArgumentException(TWO_ZEROS_ERROR_MESSAGE);
+			throw new IllegalArgumentException(Messages.TWO_NUMBERS_ZEROS_ERROR_MESSAGE);
 		}
-		return(number2==0?number1:(findGreatestCommonDivisor(number2, number1%number2)));
+		return (number2 == 0 ? number1 : (findGreatestCommonDivisor(number2, number1 % number2)));
 	}
 
 	/**
@@ -43,12 +43,12 @@ public final class GreatestCommonDivisor {
 	 */
 	public static long findLeastCommonMultiple(int number1, int number2) {
 		if (number1 == 0 && number2 == 0) {
-			throw new IllegalArgumentException(TWO_ZEROS_ERROR_MESSAGE);
+			throw new IllegalArgumentException(Messages.TWO_NUMBERS_ZEROS_ERROR_MESSAGE);
 		} else if (number1 == 0 && number2 != 0) {
 			return number2;
 		} else if (number1 != 0 && number2 == 0) {
 			return number1;
-		} 
+		}
 
 		return number1 * (number2 / findGreatestCommonDivisor(number1, number2));
 	}

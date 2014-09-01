@@ -1,5 +1,7 @@
 package com.sirma.itt.javacourse.intro.numbers;
 
+import com.sirma.itt.javacourse.intro.messages.Messages;
+
 /**
  * Class for summing large numbers.
  * 
@@ -14,10 +16,9 @@ public final class SummatorLargeNumbers {
 
 	}
 
-	public static final String NUMBER_FORMAT_ERROR_MESSAGE = "The number format is not valid!";
-
 	public static final char ZERO_CHAR = '0';
 
+	// REVIEW - no information about the exceptions that might be thrown
 	/**
 	 * Finds and returns the sum of two large numbers, given as strings.
 	 * 
@@ -29,7 +30,7 @@ public final class SummatorLargeNumbers {
 	 */
 	public static String sumLargeNumbers(String number1, String number2) {
 		if (!number1.matches("[0-9]*") || !number2.matches("[0-9]*")) {
-			throw new IllegalArgumentException(NUMBER_FORMAT_ERROR_MESSAGE);
+			throw new IllegalArgumentException(Messages.NUMBER_FORMAT_ERROR_MESSAGE);
 		}
 
 		String currentNumber1 = number1;

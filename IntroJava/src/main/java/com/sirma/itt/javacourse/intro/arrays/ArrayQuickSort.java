@@ -1,5 +1,7 @@
 package com.sirma.itt.javacourse.intro.arrays;
 
+import com.sirma.itt.javacourse.intro.messages.Messages;
+
 /**
  * Class for applying the quick sort algorithm.
  * 
@@ -14,8 +16,6 @@ public final class ArrayQuickSort {
 
 	}
 
-	public static final String ARRAY_SIZE_ERROR_MESSAGE = "The array`s size is equal to or below zero";
-
 	/**
 	 * Sorts an array. Invokes the sorting algorithm.
 	 * 
@@ -23,8 +23,13 @@ public final class ArrayQuickSort {
 	 *            the array to be sorted
 	 */
 	public static void sort(int[] array) {
-		if (array.length <= 0) {
-			throw new IllegalArgumentException(ARRAY_SIZE_ERROR_MESSAGE);
+		// REVIEW invalid check
+		if (array == null) {
+			System.out.println("The array is null!");
+		}
+
+		if (array.length == 0) {
+			throw new IllegalArgumentException(Messages.ARRAY_SIZE_ERROR_MESSAGE);
 		}
 
 		quickSort(array, 0, array.length - 1);

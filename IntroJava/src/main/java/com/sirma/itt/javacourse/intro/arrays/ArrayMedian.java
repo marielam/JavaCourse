@@ -1,5 +1,7 @@
 package com.sirma.itt.javacourse.intro.arrays;
 
+import com.sirma.itt.javacourse.intro.messages.Messages;
+
 /**
  * Class for finding an array`s median.
  * 
@@ -14,8 +16,6 @@ public final class ArrayMedian {
 
 	}
 
-	public static final String ARRAY_SIZE_ERROR_MESSAGE = "The array`s size is equal to or below zero";
-
 	/**
 	 * Finds a given array`s median as the sums of the elements before the median and after it are
 	 * as close as possible.
@@ -26,9 +26,15 @@ public final class ArrayMedian {
 	 *         it will return 1 and if there is no such element it will return -1
 	 */
 	public static int findArrayMedian(int[] array) {
-		if (array.length <= 0) {
-			throw new IllegalArgumentException(ARRAY_SIZE_ERROR_MESSAGE);
+		if (array == null) {
+			System.out.println("The array is null!");
+			return 0;
 		}
+
+		if (array.length == 0) {
+			throw new IllegalArgumentException(Messages.ARRAY_SIZE_ERROR_MESSAGE);
+		}
+
 		if (array.length == 1) {
 			return 1;
 		}

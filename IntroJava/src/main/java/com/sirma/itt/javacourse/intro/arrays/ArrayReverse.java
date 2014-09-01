@@ -1,24 +1,24 @@
 package com.sirma.itt.javacourse.intro.arrays;
 
+import com.sirma.itt.javacourse.intro.messages.Messages;
+
 /**
  * Class for reversing an array.
  * 
  * @author Mariela
  */
 public final class ArrayReverse {
-	
+
 	/**
 	 * Protects from instantiation.
 	 */
 	private ArrayReverse() {
-		
+
 	}
 
-	
-	public static final String ARRAY_SIZE_ERROR_MESSAGE = "The array`s size is equal or below zero";
-
+	// REVIEW comment start with upercase
 	/**
-	 * reverses the elements of an array by swapping the first element with the last, the second
+	 * Reverses the elements of an array by swapping the first element with the last, the second
 	 * with the one before the last and etc.
 	 * 
 	 * @param array
@@ -26,19 +26,24 @@ public final class ArrayReverse {
 	 * @return the array with reversed elements
 	 */
 	public static int[] reverseArray(int[] array) {
+		// REVIEW invalid check
+		if (array == null) {
+			System.out.println("The array is null!");
+			return null;
+		}
 
-		if (array.length <= 0) {
-			throw new IllegalArgumentException(ARRAY_SIZE_ERROR_MESSAGE);
+		if (array.length == 0) {
+			throw new IllegalArgumentException(Messages.ARRAY_SIZE_ERROR_MESSAGE);
+		}
+		// REVIEW unformatted code
+		int length = array.length;
 
-		} 
-			int length = array.length;
+		for (int j = 0; j < length / 2; j++) {
+			int temp = array[j];
+			array[j] = array[length - 1 - j];
+			array[length - 1 - j] = temp;
+		}
 
-			for (int j = 0; j < length/2; j++) {
-				int temp = array[j];
-				array[j] = array[length - 1 - j];
-				array[length - 1 - j] = temp;
-			}
-	
 		return array;
 	}
 

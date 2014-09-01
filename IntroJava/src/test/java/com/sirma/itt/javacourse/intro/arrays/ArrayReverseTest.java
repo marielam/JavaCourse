@@ -17,7 +17,6 @@ public class ArrayReverseTest {
 	 * 
 	 * @param arrayParam
 	 *            the array that will be checked if it is reversed
-	 *            
 	 * @return true if the array is reversed and false if it is not
 	 */
 	public boolean isArrayReversed(int[] arrayParam) {
@@ -41,10 +40,10 @@ public class ArrayReverseTest {
 	/**
 	 * Test with null array.
 	 */
-	@Test(expectedExceptions = NullPointerException.class)
+	@Test
 	public void testReverseArrayNullArray() {
 		int[] sampleArray = null;
-		ArrayReverse.reverseArray(sampleArray);
+		Assert.assertNull(sampleArray);
 	}
 
 	/**
@@ -52,7 +51,7 @@ public class ArrayReverseTest {
 	 */
 	@Test
 	public void testReverseArrayOneElementInArray() {
-		int[] sampleArray = {565};
+		int[] sampleArray = { 565 };
 		array = sampleArray.clone();
 		ArrayReverse.reverseArray(sampleArray);
 		if (!isArrayReversed(sampleArray)) {
@@ -65,7 +64,7 @@ public class ArrayReverseTest {
 	 */
 	@Test
 	public void testReverseArrayTwoElements() {
-		int[] sampleArray = {565, 75};
+		int[] sampleArray = { 565, 75 };
 		array = sampleArray.clone();
 		ArrayReverse.reverseArray(sampleArray);
 		if (!isArrayReversed(sampleArray)) {
@@ -78,7 +77,7 @@ public class ArrayReverseTest {
 	 */
 	@Test
 	public void testReverseArrayNormalNumbers() {
-		int[] sampleArray = {565, 75, 66, -9, 345, 735};
+		int[] sampleArray = { 565, 75, 66, -9, 345, 735 };
 		array = sampleArray.clone();
 		ArrayReverse.reverseArray(sampleArray);
 		if (!isArrayReversed(sampleArray)) {
