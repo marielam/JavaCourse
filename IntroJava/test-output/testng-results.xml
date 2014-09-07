@@ -2,20 +2,32 @@
 <testng-results skipped="0" failed="0" total="5" passed="5">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="40" started-at="2014-08-27T22:00:25Z" finished-at="2014-08-27T22:00:25Z">
+  <suite name="Default suite" duration-ms="44" started-at="2014-09-07T18:18:22Z" finished-at="2014-09-07T18:18:22Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="40" started-at="2014-08-27T22:00:25Z" finished-at="2014-08-27T22:00:25Z">
-      <class name="com.sirma.itt.javacourse.intro.arrays.ArrayReverseTest">
-        <test-method status="PASS" signature="testReverseArrayEmptyArray()[pri:0, instance:com.sirma.itt.javacourse.intro.arrays.ArrayReverseTest@3ec76887]" name="testReverseArrayEmptyArray" duration-ms="10" started-at="2014-08-28T01:00:25Z" finished-at="2014-08-28T01:00:25Z">
+    <test name="Default test" duration-ms="44" started-at="2014-09-07T18:18:22Z" finished-at="2014-09-07T18:18:22Z">
+      <class name="com.sirma.itt.javacourse.intro.hangman.HangmanTest">
+        <test-method status="PASS" signature="testHangmanLeftOneAttempt()[pri:0, instance:com.sirma.itt.javacourse.intro.hangman.HangmanTest@3995638a]" name="testHangmanLeftOneAttempt" duration-ms="15" started-at="2014-09-07T21:18:22Z" finished-at="2014-09-07T21:18:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testHangmanLeftOneAttempt -->
+        <test-method status="PASS" signature="testHangmanLoose()[pri:0, instance:com.sirma.itt.javacourse.intro.hangman.HangmanTest@3995638a]" name="testHangmanLoose" duration-ms="2" started-at="2014-09-07T21:18:22Z" finished-at="2014-09-07T21:18:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testHangmanLoose -->
+        <test-method status="PASS" signature="testHangmanNoWrongAnswerNumberAttempts()[pri:0, instance:com.sirma.itt.javacourse.intro.hangman.HangmanTest@3995638a]" name="testHangmanNoWrongAnswerNumberAttempts" duration-ms="1" started-at="2014-09-07T21:18:22Z" finished-at="2014-09-07T21:18:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testHangmanNoWrongAnswerNumberAttempts -->
+        <test-method status="PASS" signature="testHangmanNull()[pri:0, instance:com.sirma.itt.javacourse.intro.hangman.HangmanTest@3995638a]" name="testHangmanNull" duration-ms="1" started-at="2014-09-07T21:18:22Z" finished-at="2014-09-07T21:18:22Z">
           <exception class="java.lang.IllegalArgumentException">
             <message>
-              <![CDATA[The array`s size is equal or below zero]]>
+              <![CDATA[The given interface is null!]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.IllegalArgumentException: The array`s size is equal or below zero
-	at com.sirma.itt.javacourse.intro.arrays.ArrayReverse.reverseArray(ArrayReverse.java:36)
-	at com.sirma.itt.javacourse.intro.arrays.ArrayReverseTest.testReverseArrayEmptyArray(ArrayReverseTest.java:37)
+              <![CDATA[java.lang.IllegalArgumentException: The given interface is null!
+	at com.sirma.itt.javacourse.intro.hangman.Hangman.<init>(Hangman.java:27)
+	at com.sirma.itt.javacourse.intro.hangman.HangmanTest.testHangmanNull(HangmanTest.java:17)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -45,24 +57,12 @@
           </exception> <!-- java.lang.IllegalArgumentException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testReverseArrayEmptyArray -->
-        <test-method status="PASS" signature="testReverseArrayNormalNumbers()[pri:0, instance:com.sirma.itt.javacourse.intro.arrays.ArrayReverseTest@3ec76887]" name="testReverseArrayNormalNumbers" duration-ms="0" started-at="2014-08-28T01:00:25Z" finished-at="2014-08-28T01:00:25Z">
+        </test-method> <!-- testHangmanNull -->
+        <test-method status="PASS" signature="testHangmanWin()[pri:0, instance:com.sirma.itt.javacourse.intro.hangman.HangmanTest@3995638a]" name="testHangmanWin" duration-ms="1" started-at="2014-09-07T21:18:22Z" finished-at="2014-09-07T21:18:22Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testReverseArrayNormalNumbers -->
-        <test-method status="PASS" signature="testReverseArrayNullArray()[pri:0, instance:com.sirma.itt.javacourse.intro.arrays.ArrayReverseTest@3ec76887]" name="testReverseArrayNullArray" duration-ms="0" started-at="2014-08-28T01:00:25Z" finished-at="2014-08-28T01:00:25Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testReverseArrayNullArray -->
-        <test-method status="PASS" signature="testReverseArrayTwoElements()[pri:0, instance:com.sirma.itt.javacourse.intro.arrays.ArrayReverseTest@3ec76887]" name="testReverseArrayTwoElements" duration-ms="0" started-at="2014-08-28T01:00:25Z" finished-at="2014-08-28T01:00:25Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testReverseArrayTwoElements -->
-        <test-method status="PASS" signature="testReverseArrayOneElementInArray()[pri:0, instance:com.sirma.itt.javacourse.intro.arrays.ArrayReverseTest@3ec76887]" name="testReverseArrayOneElementInArray" duration-ms="0" started-at="2014-08-28T01:00:25Z" finished-at="2014-08-28T01:00:25Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testReverseArrayOneElementInArray -->
-      </class> <!-- com.sirma.itt.javacourse.intro.arrays.ArrayReverseTest -->
+        </test-method> <!-- testHangmanWin -->
+      </class> <!-- com.sirma.itt.javacourse.intro.hangman.HangmanTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

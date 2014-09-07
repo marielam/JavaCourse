@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.sirma.itt.javacourse.intro.arrays.ArrayProcessTest">
+      <class name="com.sirma.itt.javacourse.intro.hangman.HangmanTest">
         <methods>
-          <include name="testPrintNullArray"/>
+          <include name="testHangmanLeftOneAttempt"/>
         </methods>
-      </class> <!-- com.sirma.itt.javacourse.intro.arrays.ArrayProcessTest -->
+      </class> <!-- com.sirma.itt.javacourse.intro.hangman.HangmanTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

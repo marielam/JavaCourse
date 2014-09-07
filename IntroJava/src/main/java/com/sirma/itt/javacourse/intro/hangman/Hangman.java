@@ -59,7 +59,7 @@ public class Hangman {
 	 * 
 	 * @return true if it is or false if it is not
 	 */
-	private Boolean isWordGuessed() {
+	public Boolean isWordGuessed() {
 		String word = sb.toString();
 		if (!word.contains(Messages.HIDDEN_LETTER_SYMBOL)) {
 			return true;
@@ -110,44 +110,12 @@ public class Hangman {
 	 *            the letter
 	 */
 	private void setVisibleLetter(char letter) {
-		int occurrences = countOccurrencesLetter(letter);
-
-		if (occurrences == 1) {
-			int index = secretWord.indexOf(letter);
-			sb.setCharAt(index, letter);
-		} else {
-
-			int[] letterIndexes = new int[occurrences];
-			int index = this.secretWord.indexOf(letter);
-
-			for (int i = 0; i < letterIndexes.length; i++) {
-				if (index != -1) {
-					letterIndexes[i] = index;
-					index = this.secretWord.indexOf(letter, index + 1);
-				}
-			}
-
-			for (int j = 0; j < occurrences; j++) {
-				sb.setCharAt(letterIndexes[j], letter);
+		char[] temporaryArray = secretWord.toCharArray();
+		for (int i = 0; i < temporaryArray.length; i++) {
+			if (temporaryArray[i] == letter) {
+				sb.setCharAt(i, letter);
 			}
 		}
-	}
-
-	/**
-	 * Counts the number of occurrences of the letter in the word.
-	 * 
-	 * @param letter
-	 *            the letter
-	 * @return the number of occurrences of the letter in the word
-	 */
-	private int countOccurrencesLetter(char letter) {
-		int occurrences = 0;
-		for (char c : secretWord.toCharArray()) {
-			if (c == letter) {
-				occurrences++;
-			}
-		}
-		return occurrences;
 	}
 
 	/**
@@ -155,7 +123,7 @@ public class Hangman {
 	 * 
 	 * @return the number of remaining attempts
 	 */
-	private int getAttempts() {
+	public int getAttempts() {
 		return attempts;
 	}
 
@@ -184,6 +152,13 @@ public class Hangman {
 	 */
 	public void run() {
 		while (true) {
+			if (isWordGuessed()) {
+				hangmanHandler.printMessage(System.lineSeparator() + Messages.WIN_MESSAGE);
+				hangmanHandler.printMessage(System.lineSeparator() + Messages.WORD_MESSAGE
+						+ secretWord + System.lineSeparator());
+				break;
+			}
+
 			if (areAttemptsOver()) {
 				hangmanHandler.printMessage(System.lineSeparator() + Messages.LOOSE_MESSAGE);
 				hangmanHandler.printMessage(System.lineSeparator() + Messages.WORD_MESSAGE
@@ -191,12 +166,6 @@ public class Hangman {
 				break;
 			}
 
-			if (isWordGuessed()) {
-				hangmanHandler.printMessage(System.lineSeparator() + Messages.WIN_MESSAGE);
-				hangmanHandler.printMessage(System.lineSeparator() + Messages.WORD_MESSAGE
-						+ secretWord + System.lineSeparator());
-				break;
-			}
 			System.out.println(Messages.GUESS_WORD + sb);
 			System.out.println("You have " + getAttempts() + " attempts!");
 			System.out.print(Messages.ENTER_LETTER);
