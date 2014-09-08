@@ -7,12 +7,12 @@ import com.sirma.itt.javacourse.intro.messages.Messages;
  * 
  * @author Mariela
  */
-public final class SummatorLargeNumbers {
+public final class NumbersSummator {
 
 	/**
 	 * Protects from instantiation.
 	 */
-	private SummatorLargeNumbers() {
+	private NumbersSummator() {
 
 	}
 
@@ -29,6 +29,14 @@ public final class SummatorLargeNumbers {
 	 * @return the sum of the given numbers
 	 */
 	public static String sumLargeNumbers(String number1, String number2) {
+		if (number1 == null || number2 == null) {
+			throw new IllegalArgumentException("One of the strings is null");
+		}
+
+		if (number1.isEmpty() || number2.isEmpty()) {
+			throw new IllegalArgumentException("One of the strings is empty");
+		}
+		
 		if (!number1.matches("[0-9]*") || !number2.matches("[0-9]*")) {
 			throw new IllegalArgumentException(Messages.NUMBER_FORMAT_ERROR_MESSAGE);
 		}

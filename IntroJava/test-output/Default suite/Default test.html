@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>5/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>7/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sun Sep 07 21:18:22 EEST 2014</td>
+<td>Started on:</td><td>Tue Sep 09 00:19:04 EEST 2014</td>
 </tr>
-<tr><td>Total time:</td><td>0 seconds (44 ms)</td>
+<tr><td>Total time:</td><td>0 seconds (61 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,25 +75,10 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.sirma.itt.javacourse.intro.hangman.HangmanTest.testHangmanLeftOneAttempt()'><b>testHangmanLeftOneAttempt</b><br>Test class: com.sirma.itt.javacourse.intro.hangman.HangmanTest</td>
-<td></td>
-<td>0</td>
-<td>com.sirma.itt.javacourse.intro.hangman.HangmanTest@3995638a</td></tr>
-<tr>
-<td title='com.sirma.itt.javacourse.intro.hangman.HangmanTest.testHangmanLoose()'><b>testHangmanLoose</b><br>Test class: com.sirma.itt.javacourse.intro.hangman.HangmanTest</td>
-<td></td>
-<td>0</td>
-<td>com.sirma.itt.javacourse.intro.hangman.HangmanTest@3995638a</td></tr>
-<tr>
-<td title='com.sirma.itt.javacourse.intro.hangman.HangmanTest.testHangmanNoWrongAnswerNumberAttempts()'><b>testHangmanNoWrongAnswerNumberAttempts</b><br>Test class: com.sirma.itt.javacourse.intro.hangman.HangmanTest</td>
-<td></td>
-<td>0</td>
-<td>com.sirma.itt.javacourse.intro.hangman.HangmanTest@3995638a</td></tr>
-<tr>
-<td title='com.sirma.itt.javacourse.intro.hangman.HangmanTest.testHangmanNull()'><b>testHangmanNull</b><br>Test class: com.sirma.itt.javacourse.intro.hangman.HangmanTest</td>
-<td><div><pre>java.lang.IllegalArgumentException: The given interface is null!
-	at com.sirma.itt.javacourse.intro.hangman.Hangman.&lt;init&gt;(Hangman.java:27)
-	at com.sirma.itt.javacourse.intro.hangman.HangmanTest.testHangmanNull(HangmanTest.java:17)
+<td title='com.sirma.itt.javacourse.intro.numbers.NumbersSummatorTest.testSumEmptyString()'><b>testSumEmptyString</b><br>Test class: com.sirma.itt.javacourse.intro.numbers.NumbersSummatorTest</td>
+<td><div><pre>java.lang.IllegalArgumentException: One of the strings is empty
+	at com.sirma.itt.javacourse.intro.numbers.NumbersSummator.sumLargeNumbers(NumbersSummator.java:37)
+	at com.sirma.itt.javacourse.intro.numbers.NumbersSummatorTest.testSumEmptyString(NumbersSummatorTest.java:46)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -118,10 +103,10 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1874598090", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1874598090'><pre>java.lang.IllegalArgumentException: The given interface is null!
-	at com.sirma.itt.javacourse.intro.hangman.Hangman.&lt;init&gt;(Hangman.java:27)
-	at com.sirma.itt.javacourse.intro.hangman.HangmanTest.testHangmanNull(HangmanTest.java:17)
+</pre></div><a href='#' onClick='toggleBox("stack-trace848505793", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace848505793'><pre>java.lang.IllegalArgumentException: One of the strings is empty
+	at com.sirma.itt.javacourse.intro.numbers.NumbersSummator.sumLargeNumbers(NumbersSummator.java:37)
+	at com.sirma.itt.javacourse.intro.numbers.NumbersSummatorTest.testSumEmptyString(NumbersSummatorTest.java:46)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -148,12 +133,202 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
 </pre></div></td>
 <td>0</td>
-<td>com.sirma.itt.javacourse.intro.hangman.HangmanTest@3995638a</td></tr>
+<td>com.sirma.itt.javacourse.intro.numbers.NumbersSummatorTest@1fb59afc</td></tr>
 <tr>
-<td title='com.sirma.itt.javacourse.intro.hangman.HangmanTest.testHangmanWin()'><b>testHangmanWin</b><br>Test class: com.sirma.itt.javacourse.intro.hangman.HangmanTest</td>
+<td title='com.sirma.itt.javacourse.intro.numbers.NumbersSummatorTest.testSumLargeNumbersInvalidNumbers()'><b>testSumLargeNumbersInvalidNumbers</b><br>Test class: com.sirma.itt.javacourse.intro.numbers.NumbersSummatorTest</td>
+<td><div><pre>java.lang.IllegalArgumentException: The number format is not valid!
+	at com.sirma.itt.javacourse.intro.numbers.NumbersSummator.sumLargeNumbers(NumbersSummator.java:41)
+	at com.sirma.itt.javacourse.intro.numbers.NumbersSummatorTest.testSumLargeNumbersInvalidNumbers(NumbersSummatorTest.java:38)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1893518845", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1893518845'><pre>java.lang.IllegalArgumentException: The number format is not valid!
+	at com.sirma.itt.javacourse.intro.numbers.NumbersSummator.sumLargeNumbers(NumbersSummator.java:41)
+	at com.sirma.itt.javacourse.intro.numbers.NumbersSummatorTest.testSumLargeNumbersInvalidNumbers(NumbersSummatorTest.java:38)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+</pre></div></td>
+<td>0</td>
+<td>com.sirma.itt.javacourse.intro.numbers.NumbersSummatorTest@1fb59afc</td></tr>
+<tr>
+<td title='com.sirma.itt.javacourse.intro.numbers.NumbersSummatorTest.testSumLargeNumbersNegativeNumbers()'><b>testSumLargeNumbersNegativeNumbers</b><br>Test class: com.sirma.itt.javacourse.intro.numbers.NumbersSummatorTest</td>
+<td><div><pre>java.lang.IllegalArgumentException: The number format is not valid!
+	at com.sirma.itt.javacourse.intro.numbers.NumbersSummator.sumLargeNumbers(NumbersSummator.java:41)
+	at com.sirma.itt.javacourse.intro.numbers.NumbersSummatorTest.testSumLargeNumbersNegativeNumbers(NumbersSummatorTest.java:73)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1614008141", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1614008141'><pre>java.lang.IllegalArgumentException: The number format is not valid!
+	at com.sirma.itt.javacourse.intro.numbers.NumbersSummator.sumLargeNumbers(NumbersSummator.java:41)
+	at com.sirma.itt.javacourse.intro.numbers.NumbersSummatorTest.testSumLargeNumbersNegativeNumbers(NumbersSummatorTest.java:73)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+</pre></div></td>
+<td>0</td>
+<td>com.sirma.itt.javacourse.intro.numbers.NumbersSummatorTest@1fb59afc</td></tr>
+<tr>
+<td title='com.sirma.itt.javacourse.intro.numbers.NumbersSummatorTest.testSumLargeNumbersNormalNumbers()'><b>testSumLargeNumbersNormalNumbers</b><br>Test class: com.sirma.itt.javacourse.intro.numbers.NumbersSummatorTest</td>
 <td></td>
 <td>0</td>
-<td>com.sirma.itt.javacourse.intro.hangman.HangmanTest@3995638a</td></tr>
+<td>com.sirma.itt.javacourse.intro.numbers.NumbersSummatorTest@1fb59afc</td></tr>
+<tr>
+<td title='com.sirma.itt.javacourse.intro.numbers.NumbersSummatorTest.testSumLargeNumbersOneZero()'><b>testSumLargeNumbersOneZero</b><br>Test class: com.sirma.itt.javacourse.intro.numbers.NumbersSummatorTest</td>
+<td></td>
+<td>0</td>
+<td>com.sirma.itt.javacourse.intro.numbers.NumbersSummatorTest@1fb59afc</td></tr>
+<tr>
+<td title='com.sirma.itt.javacourse.intro.numbers.NumbersSummatorTest.testSumLargeNumbersTwoZeros()'><b>testSumLargeNumbersTwoZeros</b><br>Test class: com.sirma.itt.javacourse.intro.numbers.NumbersSummatorTest</td>
+<td></td>
+<td>0</td>
+<td>com.sirma.itt.javacourse.intro.numbers.NumbersSummatorTest@1fb59afc</td></tr>
+<tr>
+<td title='com.sirma.itt.javacourse.intro.numbers.NumbersSummatorTest.testSumNullString()'><b>testSumNullString</b><br>Test class: com.sirma.itt.javacourse.intro.numbers.NumbersSummatorTest</td>
+<td><div><pre>java.lang.IllegalArgumentException: One of the strings is null
+	at com.sirma.itt.javacourse.intro.numbers.NumbersSummator.sumLargeNumbers(NumbersSummator.java:33)
+	at com.sirma.itt.javacourse.intro.numbers.NumbersSummatorTest.testSumNullString(NumbersSummatorTest.java:54)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+</pre></div><a href='#' onClick='toggleBox("stack-trace893361968", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace893361968'><pre>java.lang.IllegalArgumentException: One of the strings is null
+	at com.sirma.itt.javacourse.intro.numbers.NumbersSummator.sumLargeNumbers(NumbersSummator.java:33)
+	at com.sirma.itt.javacourse.intro.numbers.NumbersSummatorTest.testSumNullString(NumbersSummatorTest.java:54)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+</pre></div></td>
+<td>0</td>
+<td>com.sirma.itt.javacourse.intro.numbers.NumbersSummatorTest@1fb59afc</td></tr>
 </table><p>
 </body>
 </html>

@@ -8,14 +8,14 @@ import org.testng.annotations.Test;
  * 
  * @author Mariela
  */
-public class SummatorLargeNumbersTest {
+public class NumbersSummatorTest {
 
 	/**
 	 * Test with two zeros.
 	 */
 	@Test
 	public void testSumLargeNumbersTwoZeros() {
-		String actual = SummatorLargeNumbers.sumLargeNumbers("0", "0");
+		String actual = NumbersSummator.sumLargeNumbers("0", "0");
 		String expected = "0";
 		Assert.assertEquals(actual, expected);
 	}
@@ -25,7 +25,7 @@ public class SummatorLargeNumbersTest {
 	 */
 	@Test
 	public void testSumLargeNumbersOneZero() {
-		String actual = SummatorLargeNumbers.sumLargeNumbers("0", "6456709876554331333");
+		String actual = NumbersSummator.sumLargeNumbers("0", "6456709876554331333");
 		String expected = "6456709876554331333";
 		Assert.assertEquals(actual, expected);
 	}
@@ -35,7 +35,23 @@ public class SummatorLargeNumbersTest {
 	 */
 	@Test(expectedExceptions = IllegalArgumentException.class)
 	public void testSumLargeNumbersInvalidNumbers() {
-		SummatorLargeNumbers.sumLargeNumbers("54566SRS*64", "87554&$klk_786");
+		NumbersSummator.sumLargeNumbers("54566SRS*64", "87554&$klk_786");
+	}
+	
+	/**
+	 * Tests  with empty strings.
+	 */
+	@Test(expectedExceptions = IllegalArgumentException.class)
+	public void testSumEmptyString() {
+		NumbersSummator.sumLargeNumbers("", "");
+	}
+
+	/**
+	 * Tests with null strings.
+	 */
+	@Test(expectedExceptions = IllegalArgumentException.class)
+	public void testSumNullString() {
+		NumbersSummator.sumLargeNumbers(null, "abc");
 	}
 
 	/**
@@ -43,7 +59,7 @@ public class SummatorLargeNumbersTest {
 	 */
 	@Test
 	public void testSumLargeNumbersNormalNumbers() {
-		String actual = SummatorLargeNumbers.sumLargeNumbers("76680238675679098986",
+		String actual = NumbersSummator.sumLargeNumbers("76680238675679098986",
 				"237890908979780");
 		String expected = "76680476566588078766";
 		Assert.assertEquals(actual, expected);
@@ -54,6 +70,6 @@ public class SummatorLargeNumbersTest {
 	 */
 	@Test(expectedExceptions = IllegalArgumentException.class)
 	public void testSumLargeNumbersNegativeNumbers() {
-		SummatorLargeNumbers.sumLargeNumbers("-76680238675679098986", "-12356768955555");
+		NumbersSummator.sumLargeNumbers("-76680238675679098986", "-12356768955555");
 	}
 }

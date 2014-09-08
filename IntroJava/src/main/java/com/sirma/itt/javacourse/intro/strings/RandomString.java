@@ -9,10 +9,18 @@ import com.sirma.itt.javacourse.intro.messages.Messages;
  * 
  * @author Mariela
  */
-public class RandomString {
+public final class RandomString {
 
 	private static Random rnd = new Random();
+	public static final String ALLOWED_SYMBOLS = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 
+	/**
+	 * Protects from instantiation.
+	 */
+	private RandomString() {
+
+	}
+	
 	/**
 	 * Generates a random string which contains only digits, lowercase and uppercase.
 	 * 
@@ -22,7 +30,7 @@ public class RandomString {
 	 */
 	public static String generateRandomString(int length) {
 		// REIVIEW good idea. Can you do it using ASCII boundaries?
-		final String allowedSymbols = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+		
 
 		if (length <= 0) {
 			throw new IllegalArgumentException(Messages.STRING_LENGTH_ERROR_MESSAGE);
@@ -30,7 +38,7 @@ public class RandomString {
 		// REVIEW good usage of constructor
 		StringBuilder sb = new StringBuilder(length);
 		for (int j = 0; j < length; j++) {
-			sb.append(allowedSymbols.charAt(rnd.nextInt(allowedSymbols.length())));
+			sb.append(ALLOWED_SYMBOLS.charAt(rnd.nextInt(ALLOWED_SYMBOLS.length())));
 		}
 		return sb.toString();
 	}
